@@ -1,0 +1,10 @@
+---
+layout: student
+title: 
+fullname:
+facebook: http://facebook.com/
+github: http://github.com/
+email: 
+mobile:
+---
+

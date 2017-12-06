@@ -1,0 +1,63 @@
+---
+layout: default
+---
+<div class="container bg-light py-5 my-5">
+  <div class="p-5 bg-info text-light text-center">
+      <h1 class="title">{{page.title}}</h1>
+  </div>
+
+  {% if page.image %}
+    {%capture image %}{{page.title}}{% endcapture %}
+  {% else %}
+    {%capture image %}default{% endcapture %}
+  {% endif %}
+  <div class="card mt-5 single-student">
+    <div class="card-body text-center">
+      <div class="text-center">
+        <img class="card-img-top"
+          style="max-width: 300px" 
+          src="{{site.url}}{{site.baseurl}}/assets/images/students/{{image}}.jpg"
+          alt="{{page.fullname}}">
+      </div>
+
+      <p class="my-3">{{page.fullname}}</p>
+      <p>{{page.about}}</p>
+        <div class="link-wrapper">
+          {% if page.github %}
+            <a  href="{{page.github}}">
+              <i class="fa fa-github" aria-hidden="true"></i>
+              Github
+            </a>
+          {% endif %}
+
+          {% if page.facebook %}
+            <a  href="{{page.facebook}}">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+              Facebook 
+            </a>
+          {% endif %}
+
+          {% if page.email %}
+            <a  href="{{page.email}}">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              {{page.email}}
+            </a>
+          {% endif %}
+
+          {% if page.mobile %}
+            <a  href="{{page.mobile}}">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              {{page.mobile}}
+            </a>
+          {% endif %}
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="my-3">
+    {{content}}
+  </div>
+</div>
+

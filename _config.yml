@@ -1,0 +1,44 @@
+baseurl: '/h43'
+name: H-43
+training_type: Top Up IT Training (php)
+status: Ongoing
+project_status: Ongoing
+projects_number: 3
+students_number: 17
+title: H-43
+permalink: /:title
+github_link: http://github.com/poloey
+facebook_link: http://facebook.com
+github: polodev
+githubey: poloey 
+facebook: H-43 group
+footer_text: Hosted on Github Page. This Website will be references for LICT H-43 batch for life time. Since Github page will never down. Thanks to opensource technology. Hope this attempt make work flow easier for all students of H-43 batch. Added daily documentation and class file in this website
+#sass:
+#  style: compressed
+collections:
+  students:
+    output: true
+    permalink: /students/:title/
+defaults:
+  - scope:
+      path: ""
+      type: students
+    values:
+      layout: student
+      image: false
+      mobile: soon
+      show_mobile: true
+      email: available soon
+      number: 1
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      published: true
+      no: 1
+      category: php
+      tags: [html, css, php, web-design, 'web development']
+      repo: 
+      show_download: true
+      

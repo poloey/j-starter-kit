@@ -1,0 +1,41 @@
+---
+title: single page
+comments: true
+layout: default
+---
+<div class="container bg-light py-5 my-5">
+  <div class="py-2 text-center">
+      <h1 class="title">{{page.title}}</h1>
+      <hr>
+      <div>
+        <a target="_blank" class="btn btn-lg btn-outline-info mx-3 my-3" href="https://github.com/{{site.githubey}}/{{page.repo}}">View On Github</a>
+        {% if page.show_download %}
+        <a class="btn btn-lg btn-outline-danger mx-3" href="https://codeload.github.com/{{site.githubey}}/{{page.repo}}/zip/master">Download class file</a>
+        {% endif %}
+      </div>
+      <hr>
+  </div>
+
+  <div class="">
+    {{content}}
+  </div>
+
+  {% assign count = 0 %}
+  {% for item in site.posts %}
+    {% assign count = count | plus: 1 %}
+  {% endfor %}
+  {% assign next = page.number | plus: 1 %}
+  {% assign prev = page.number | minus: 1 %}
+
+  <div class="text-center p-5 text-center">
+    {% if page.number > 1 %}
+      <a class="btn btn-info btn-lg my-2" href="{{site.url}}{{site.baseurl}}/class-{{prev}}">Prev Class</a>
+    {% endif %}
+    {% if page.number < count %}
+      <a class="btn btn-success btn-lg my-2" href="{{site.url}}{{site.baseurl}}/class-{{next}}">Next Class</a>
+    {% endif %}
+  </div>
+
+  {% include disqus.html %}
+</div>
+

@@ -1,0 +1,80 @@
+---
+---
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
+@import 'syntax';
+$font: 'Roboto', sans-serif;
+$fs: 20px;
+$ssl: seagreen;
+body {
+  font-size: $fs;
+  font-family: $font;
+}
+
+a, button, p, .list-group-item {
+  font-size: $fs !important;
+}
+
+strong {
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+}
+.student-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    height: 350px;
+    margin-bottom: 1em;
+  }
+}
+blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 17.5px;
+  border-left: 5px solid #eee;
+}
+
+.link-wrapper {
+  width: 200px;
+  margin: 0 auto;
+  text-align: left;
+  a {
+    i {
+      margin-right: 5px;
+      color: grey;
+    }
+    color: $ssl;
+    display: block;
+    &:hover {
+      color: darken($ssl, 10%);
+    }
+  }
+}
+
+.list-group {
+  .list-group-item {
+    padding: 0;
+  }
+  a {
+    padding: .75rem 1.25rem;
+    display: block;
+    text-align: left;
+    color: $ssl;
+    transition: all .3s;
+    &:hover {
+      color: crimson;
+      margin-left: 20px;
+      transition: all .3s;
+      text-decoration: none;
+
+    }
+  }
+}
+
+
+

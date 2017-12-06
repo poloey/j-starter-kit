@@ -1,0 +1,23 @@
+  <footer class="bg-dark text-light py-5 mt-5">
+    <div class="container">
+      <p><a class="btn btn-link text-light" href="{{site.url}}{{site.baseurl}}/">{{ site.title }}</a> is maintained by Shibu deb polo.</p>
+      <p>
+        <a class="btn-link text-light mr-2" href="{{ site.github_link }}">
+          <i class="fa fa-github" aria-hidden="true"></i>
+          {{site.github}}
+        </a>
+      </p>
+      <p>
+        <a class="btn-link text-light" href="{{ site.facebook_link }}">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          {{site.facebook}}
+        </a>
+      </p>
+      <p class="footer-text">{{ site.footer_text }}</p>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="{{ "assets/bootstrap/popper.min.js" | relative_url }}"></script>
+  <script src="{{ "assets/bootstrap/bootstrap.min.js" | relative_url }}"></script>
+</body>
+</html>
